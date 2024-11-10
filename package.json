@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "npx": "^10.2.2"
+  },
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve"
+  }
+}
