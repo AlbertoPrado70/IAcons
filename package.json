@@ -4,6 +4,10 @@
     "npx": "^10.2.2"
   },
   "scripts": {
-    "start": "npx @11ty/eleventy --serve"
+    "start": "npx @11ty/eleventy --serve",
+    "tw": "npx tailwindcss -i ./src/style.css -o ./src/style.min.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.14"
   }
 }
