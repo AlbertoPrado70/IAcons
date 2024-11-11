@@ -135,18 +135,5 @@
 
     </style>
 
-    <script>
-        document.querySelector('input').addEventListener('keyup', e => {
-            document.querySelectorAll('.item').forEach(i => {
-                if(!i.querySelector('.label').innerHTML.trim().includes(e.target.value.toLowerCase())) {
-                    i.style.display = "none";
-                }
-                else {
-                    i.style.display = 'block';
-                }
-            });
-        });
-    </script>
-
 </body>
 </html>

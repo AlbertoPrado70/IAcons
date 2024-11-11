@@ -14,7 +14,7 @@ module.exports = function() {
             }
 
             return {
-                name: item.name.split('.')[0],
+                name: item.name.split('.')[0].replaceAll('-', ' '),
                 category: dir.name,
                 svg: item.name.split('.')[0] + '.svg',
                 png: item.name.split('.')[0] + '.png'
