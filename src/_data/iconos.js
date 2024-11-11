@@ -9,6 +9,10 @@ module.exports = function() {
         
         return fs.readdirSync(path.join(dir.parentPath, dir.name), {withFileTypes: true}).flatMap(item => {
 
+            if(item.name.endsWith('.png')) {
+                return [];
+            }
+
             return {
                 name: item.name.split('.')[0],
                 category: dir.name,

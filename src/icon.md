@@ -1,11 +1,11 @@
 ---
 pagination:
-  data: nombres
+  data: iconos
   size: 1
-  alias: nombre
-permalink: "nombre/{{ nombre.name | slugify }}/"
+  alias: icono
+permalink: "icon/{{ icono.category | slugify }}/{{ icono.name | slugify}}/"
 ---
 
-<h1> Icono </h1>
+<h1> Icono {{ icono.name }} </h1>
 
-{{ nombre.name }}
+<img src="/images/{{ icono.category}}/{{ icono.svg }}">
