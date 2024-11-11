@@ -1,21 +1,19 @@
 # IAcons
 
-Este proyecto contiene una colección de iconos e imagenes creadas con DALLE3 y que puedes usar de manera libre en cualquier proyecto.
+This project contains a collection of icons and images created with DALLE3 that you can freely use in any project.
 
-## ¿Como funciona?
+## How does it work?
 
-Con un pequeño prompt y la API de ChatGPT genere varios iconos, despues use potrace para convertirlos a un formato mas amigable para la web.
+With a simple prompt and the ChatGPT API, I generated various icons, then used Potrace to convert them into a more web-friendly format.
 
-## ¿Hay iconos con color?
+## Are there colored icons?
 
-No, 
+No.
 
-## Eleventy al rescate
+## Eleventy to the rescue
 
-Para mostrar de manera simple todos los iconos utilice eleventy.
+I used Eleventy to display all the icons in a simple manner.
 
-## 
+The live version is available on my blog.
 
-La versión en vivo esta en mi [blog](https://alprado.com/icons/). 
-
-Actualizo constantemente la pagina por lo que puedes guardarla en tus marcadores para ver el nuevo contenido.
+I constantly update the page, so you can bookmark it to see new content.
