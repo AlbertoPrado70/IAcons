@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <meta name="robots" content="noindex">
-    <link rel="stylesheet" href="style.min.css">
+    <link rel="stylesheet" href="/style.min.css">
     <script src="https://unpkg.com/htmx.org@2.0.3"></script>
 </head>
 <body class="text-slate-900">
@@ -22,8 +22,10 @@
             </div>
         </div>
         <div class="px-2 py-6 max-w-screen-lg mx-auto flex gap-6 items-center">
-            <h1 class="text-3xl font-semibold">AIcons</h1>
-            <form class="flex grow p-3 bg-gray-100 rounded-full px-4">
+            <a href="/">
+                <h1 class="text-3xl font-bold">AIcons</h1>
+            </a>
+            <form class="flex grow p-3 bg-gray-100 rounded-full px-6">
                 <input type="text" class="grow bg-transparent outline-none px-2">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
                     <path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z" clip-rule="evenodd" />
@@ -32,15 +34,15 @@
         </div>
     </header>
 
-    <main>
+    <main class="content max-w-screen-lg mx-auto px-2 mb-6">
         {{ content }}
     </main>
 
     <div class="max-w-screen-lg mx-auto px-2">
         <div class="grid grid-cols-4 gap-6">
             {% for icon in iconos %}
-                <div class="item bg-gray-50 p-6 rounded">
-                    <img src="/images/{{ icon.category }}/{{ icon.svg }}">
+                <div class="item bg-gray-50 p-6 rounded cursor-pointer" hx-get="/icon/{{ icon.category }}/{{ icon.name | slugify}}" hx-target=".content" hx-select=".item-content">
+                    <img src="/images/{{ icon.category }}/{{ icon.svg }}" class="mb-2">
                     <div class="label text-sm font-medium text-center">
                         <span class="capitalize">{{ icon.name }}</span>
                     </div>
